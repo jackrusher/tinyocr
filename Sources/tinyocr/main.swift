@@ -3,7 +3,7 @@ import Cocoa
 import Vision
 import Foundation
 
-@available(macOS 12.0, *)
+@available(macOS 11.0, *)
 
 struct tinyocr: ArgumentParser.ParsableCommand {
     public static let configuration = CommandConfiguration(abstract: "Perform OCR on every image passed a command line argument, output to stdout")
@@ -32,7 +32,7 @@ struct tinyocr: ArgumentParser.ParsableCommand {
     }
 }
 
-if #available(macOS 12.0, *) {
+if #available(macOS 11.0, *) {
     tinyocr.main()
 } else {
     print("This code only runs on macOS 11.0 and higher")
